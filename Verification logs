@@ -1,0 +1,65 @@
+*************** Everything that was missing from the last time ***************************************
+
+ubuntu@ip-172-31-47-81:~/projects/Git-02-Project$ git config user.name "Mani944-desi"
+git config user.email "manikantdevops@gmail.com"
+
+# amend latest commit author
+git commit --amend --author="Mani944-desi <manikantdevops@gmail.com>" --no-edit
+git push --force-with-lease origin main
+[feature/conflict fa0b73b] chore: add conflict line on feature
+ Date: Mon Nov 24 04:17:08 2025 +0000
+ 1 file changed, 1 insertion(+)
+Everything up-to-date
+
+
+**********************************************************************************
+ubuntu@ip-172-31-47-81:~/projects/Git-02-Project$ git remote -v
+origin  git@github.com:Mani944-desi/Git-02-Project.git (fetch)
+origin  git@github.com:Mani944-desi/Git-02-Project.git (push)
+ubuntu@ip-172-31-47-81:~/projects/Git-02-Project$ git remote -vv
+origin  git@github.com:Mani944-desi/Git-02-Project.git (fetch)
+origin  git@github.com:Mani944-desi/Git-02-Project.git (push)
+
+****************************************************************************************
+ubuntu@ip-172-31-47-81:~/projects/Git-02-Project$ git log --oneline --decorate -n 5
+fa0b73b (HEAD -> feature/conflict) chore: add conflict line on feature
+2381b79 (origin/main, main) chore: add conflict line on main
+4a304f5 (origin/feature/add-hello, feature/add-hello) chore: merge feature/add-hello into main
+1dcdae9 feat: add hello line in hello.sh
+f5fa49e chore: initial project skeleton with build and deploy scripts
+
+*********************************************************************************************
+ubuntu@ip-172-31-47-81:~/projects/Git-02-Project$ git log --oneline --decorate --graph
+* fa0b73b (HEAD -> feature/conflict) chore: add conflict line on feature
+* 2381b79 (origin/main, main) chore: add conflict line on main
+*   4a304f5 (origin/feature/add-hello, feature/add-hello) chore: merge feature/add-hello into main
+|\
+| * 1dcdae9 feat: add hello line in hello.sh
+|/
+* f5fa49e chore: initial project skeleton with build and deploy scripts
+
+**********************************************************************************************************
+ubuntu@ip-172-31-47-81:~/projects/Git-02-Project$ git branch -a
+  feature/add-hello
+* feature/conflict
+  main
+  remotes/origin/feature/add-hello
+  remotes/origin/feature/conflict
+  remotes/origin/main
+
+*******************************************************************************************************
+
+ubuntu@ip-172-31-47-81:~/projects/Git-02-Project$
+ubuntu@ip-172-31-47-81:~/projects/Git-02-Project$ git stash list
+stash@{0}: On add-hello: WIP: testing stash
+
+
+**************************************************************************************************************
+ubuntu@ip-172-31-47-81:~/projects/Git-02-Project$ git log --oneline --decorate --graph -n 10
+* fa0b73b (HEAD -> feature/conflict) chore: add conflict line on feature
+* 2381b79 (origin/main, main) chore: add conflict line on main
+*   4a304f5 (origin/feature/add-hello, feature/add-hello) chore: merge feature/add-hello into main
+|\
+| * 1dcdae9 feat: add hello line in hello.sh
+|/
+* f5fa49e chore: initial project skeleton with build and deploy scripts
